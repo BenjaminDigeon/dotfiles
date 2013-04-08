@@ -5,8 +5,8 @@ for file in ~/.{bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# init rvm
-source ~/.rvm/scripts/rvm
-
 #Set the $HTTP_PROXY
 set_http_proxy
+
+# init rvm (/!\ in the bottom of bash_profile)
+source ~/.rvm/scripts/rvm
