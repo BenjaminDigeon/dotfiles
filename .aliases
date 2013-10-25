@@ -52,4 +52,11 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias eject_cd="drutil tray eject 1"
 
 #Other
-alias cd_Cours='cd /Users/ben/Cours/2012-2013/S2/'
+alias cd_Cours='cd /Users/ben/Cours/2013-2014/S3/'
+
+alias ftp_server_start='sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist'
+alias ftp_server_stop='sudo -s launchctl unload -w /System/Library/LaunchDaemons/ftp.plist'
+alias postgresql_server_start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+alias postgresql_server_stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
+alias redis_start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'
+alias redis_stop='launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.redis.plist'

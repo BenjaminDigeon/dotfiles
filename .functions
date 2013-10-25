@@ -51,7 +51,7 @@ gifify() {
   fi
 }
 
-set_http_proxy () {
+set_http_proxy_with_wifi_network () {
 	if networksetup -getairportnetwork en1 | grep -i -a "LILLE1" ; then
 		export https_proxy="https://cacheserv2.univ-lille1.fr:3128"
 		export http_proxy="http://cacheserv2.univ-lille1.fr:3128"
@@ -62,4 +62,9 @@ set_http_proxy () {
 		unset HTTP_PROXY
 		unset HTTPS_PROXY
 	fi
+}
+
+set_http_proxy_lille_1 () {
+    export https_proxy="https://cacheserv2.univ-lille1.fr:3128"
+    export http_proxy="http://cacheserv2.univ-lille1.fr:3128"
 }

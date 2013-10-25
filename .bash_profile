@@ -5,8 +5,11 @@ for file in ~/.{bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-#Set the $HTTP_PROXY
-set_http_proxy
+#Set the $HTTP_PROXY for wifi
+set_http_proxy_with_wifi_network
 
 # init rvm (/!\ in the bottom of bash_profile)
 source ~/.rvm/scripts/rvm
+
+#init git autocompletation
+source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
