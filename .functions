@@ -50,19 +50,3 @@ gifify() {
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
 }
-
-set_http_proxy_lille_1 () {
-    export https_proxy="https://cacheserv2.univ-lille1.fr:3128"
-    export http_proxy="http://cacheserv2.univ-lille1.fr:3128"
-    export npm_config_proxy="http://cacheserv2.univ-lille1.fr:3128"
-	export npm_config_https_proxy="https://cacheserv2.univ-lille1.fr:3128"
-    export ALL_PROXY=$http_proxy
-}
-
-unset_http_proxy_lille_1 () {
-	unset HTTP_PROXY
-	unset HTTPS_PROXY
-	unset npm_config_proxy
-	unset npm_config_https_proxy
-	unset ALL_PROXY
-}

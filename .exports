@@ -17,5 +17,5 @@ export HISTTIMEFORMAT
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
 
-#Sage
-export PATH="/Users/ben/Cours/2012-2013/S2/PAC/TP/lib/sage:$PATH"
+# Configure the bundle open editor to atom
+export BUNDLER_EDITOR="atom"

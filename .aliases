@@ -31,7 +31,7 @@ alias whois="whois -h whois-servers.net"
 alias flush="dscacheutil -flushcache"
 
 # View HTTP traffic
-alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # OS X has no `md5sum`, so use `md5` as a fallback
@@ -57,8 +57,6 @@ alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 alias eject_cd="drutil tray eject 1"
 
 #Other
-alias cd_Cours='cd /Users/ben/Cours/2013-2014/S3/'
-
 alias ftp_server_start='sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist'
 alias ftp_server_stop='sudo -s launchctl unload -w /System/Library/LaunchDaemons/ftp.plist'
 alias postgresql_server_start='launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist'
