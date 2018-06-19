@@ -3,7 +3,7 @@
 # Symlink each dotfile in the home directory
 # TODO : Backup existing dotfile first
 
-for name in .{bash_prompt,exports,aliases,functions,bashrc,bash_profile}; do
+for name in .{bash_prompt,exports,aliases,functions,bashrc,bash_profile,slate,gitignore_global}; do
   source="$PWD/$name"
   target="$HOME/$name"
   echo "-----> Symlinking $source to $target"
