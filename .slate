@@ -1,11 +1,15 @@
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
+# Slate configuration file
+# See https://github.com/jigish/slate for more options
 
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
+# Alias
+alias fullscreen screenOriginX;screenOriginY screenSizeX;screenSizeY
+
 # Resize Bindings
+bind f:cmd;alt       move ${fullscreen}
 bind right:alt       resize +10% +0
 bind left:alt        resize -10% +0
 bind up:alt          resize +0   -10%
