@@ -50,3 +50,11 @@ gifify() {
     echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
   fi
 }
+
+# Add and push to git repository factorio saves
+factorio_save() {
+  save_path=~/Library/Application\ Support/factorio/saves/
+  git -C "${save_path}" add .
+  git -C "${save_path}" commit -m "Factorio saves at `date`"
+  git -C "${save_path}" push origin master
+}
