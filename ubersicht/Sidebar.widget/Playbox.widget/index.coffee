@@ -1,5 +1,4 @@
 options =
-  # Easily enable or disable the widget.
   widgetEnable: true
 
 command: "source Sidebar.widget/Playbox.widget/spotify-info.sh"
@@ -51,27 +50,25 @@ style: """
 
   .album
     color white05
-
 """
 
 options : options
 
-render: (output) ->
-  return "
-    <div class='wrapper'>
-      <div class='art'></div>
-      <div class='text'>
-        <div class='song'></div>
-        <div class='artist'></div>
-        <div class='album'></div>
-      </div>
-      <div class='progress'></div>
-    </div>"
+render: -> """
+  <div class='wrapper'>
+    <div class='art'></div>
+    <div class='text'>
+      <div class='song'></div>
+      <div class='artist'></div>
+      <div class='album'></div>
+    </div>
+    <div class='progress'></div>
+  </div>
+"""
 
 update: (output, domEl) ->
   # Get our main DIV.
   div = $(domEl)
-
   if @options.widgetEnable
     # Get our pieces.
     values = output.split('|')
@@ -82,27 +79,24 @@ update: (output, domEl) ->
     playing = values[4]
     percentOfSong = parseFloat(values[5].replace(',', '.'))
 
-    tWidth = div.width();
+    tWidth = div.width()
     tCurrent = percentOfSong * tWidth
-
-    # Initialize our HTML.
-    medianowHTML = ''
 
     currArt = div.find('.art').css('background-image').split('/').pop().slice(0,-1)
     if playing != 'playing'
       div.animate({ opacity: 0 }, 250)
       setTimeout(div.hide(1), 1)
     else
-      div.animate({ opacity: 1 }, 250, "swing", setTimeout(div.show(1), 1))
+      div.animate({ opacity: 1 }, 250, 'swing', setTimeout(div.show(1), 1))
       div.find('.song').html(trackName)
       div.find('.artist').html(artist)
       div.find('.album').html(album)
-      div.find('.progress').css width: tCurrent
+      div.find('.progress').css('width', tCurrent)
       if tArtwork isnt currArt
         if tArtwork == 'NA'
           div.find('.art').css('background-image', 'url(Sidebar.widget/Playbox.widget/as/default.png)')
         else
-          div.find('.art').css('background-image', 'url('+tArtwork+')')
+          div.find('.art').css('background-image', "url(#{tArtwork})")
 
     # Sort out flex-box positioning.
     div.parent('div').css('order', '7')

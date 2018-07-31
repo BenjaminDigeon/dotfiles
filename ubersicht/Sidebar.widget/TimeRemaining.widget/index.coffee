@@ -21,8 +21,10 @@ style: """
   width 176px
   overflow hidden
   white-space nowrap
+
   *, *:before, *:after
     box-sizing border-box
+
   .wrapper
     position: relative
     font-size 8pt
@@ -33,8 +35,10 @@ style: """
     display flex
     flex-direction column
     flex-wrap nowrap
+
   .wrapper ul
     padding-left 2px
+
   .wrapper span:first-of-type
     font-weight 700
     color white
