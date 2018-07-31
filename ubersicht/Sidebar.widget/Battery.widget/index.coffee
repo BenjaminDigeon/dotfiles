@@ -1,7 +1,3 @@
-# Code originally created by the awesome members of Ubersicht community.
-# I stole from so many I can't remember who you are, thank you so much everyone!
-# Haphazardly adjusted and mangled by Pe8er (https://github.com/Pe8er)
-
 options =
   # Easily enable or disable the widget.
   widgetEnable: true

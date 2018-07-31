@@ -78,7 +78,6 @@ render: -> """
 
 # Update the rendered output.
 update: (output, domEl) ->
-
   # Get our main DIV.
   div = $(domEl)
 

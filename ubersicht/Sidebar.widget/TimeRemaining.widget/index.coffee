@@ -2,6 +2,10 @@ options =
   widgetEnable: true
   events: [
     {
+      date: '2018-08-25',
+      name: 'move out'
+    },
+    {
       date: '2018-09-04',
       name: 'departure'
     }
@@ -55,8 +59,8 @@ render: (output) ->
   html = "<div class='wrapper'><ul>"
   for event in @options.events
     html += "<li>"
-    html += "<span id='#{event.name}_value'>0</span>"
-    html += "<span> days until #{event.name}</span>"
+    html += "<span id='#{event.name.replace(" ","")}_value'>0</span>"
+    html += "<span> days before #{event.name}</span>"
     html += "</li>"
   html += "</ul></div>"
 
@@ -65,13 +69,11 @@ render: (output) ->
 # Update the rendered output.
 # In function of refreshFrequency
 update: (output, domEl) ->
-
   # Get our main DIV.
   div = $(domEl)
-
   if @options.widgetEnable
     for event in @options.events
-      div.find("##{event.name}_value").html @dayUntil(event.date)
+      div.find("##{event.name.replace(" ","")}_value").html @dayUntil(event.date)
 
     # Sort out flex-box positioning.
     div.parent('div').css('order', '1')
