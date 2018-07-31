@@ -1,9 +1,10 @@
 options =
   widgetEnable: true
+  order: 2
 
 command: "df -H | grep '/dev/disk1s1' | awk '{ print $5 }'"
 
-refreshFrequency: 2000
+refreshFrequency: '2h'
 
 style: """
   fColor1 = rgba(white,1)
@@ -86,7 +87,7 @@ update: (output, domEl) ->
     div.find('.hdd .progress').css('width', tCurrent)
     div.find('.hddPercent').html("#{percentage} %")
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '2')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
     # Animate
     div.css('display', 'block')

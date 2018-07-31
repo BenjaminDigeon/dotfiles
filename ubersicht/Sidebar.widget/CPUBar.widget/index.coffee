@@ -1,5 +1,6 @@
 options =
   widgetEnable: true
+  order: 2
 
 command: "ps aux  | awk 'BEGIN { sum = 0 }  { sum += $3 }; END { print sum }' && sysctl hw.ncpu | awk '{print $2}'"
 
@@ -89,7 +90,7 @@ update: (output, domEl) ->
     div.find('.cpu .progress').css('width', tCurrent)
     div.find('.cpuPercent').html("#{total_cpu_percent} %")
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '2')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
     # Animate
     div.css('display', 'block')

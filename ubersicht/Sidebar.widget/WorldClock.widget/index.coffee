@@ -4,6 +4,7 @@
 options =
   # Easily enable or disable the widget.
   widgetEnable:           true
+  order: 6
 
   # Enter locations to set up world clocks. Reference - en.wikipedia.org/wiki/List_of_tz_database_time_zones
   locations   :           "Europe/Paris,America/Montreal"
@@ -108,7 +109,7 @@ update: (output, domEl) ->
     # div.html("<div class='wrapper'>" + output + "</div>")
 
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '6')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
   else
     div.remove()

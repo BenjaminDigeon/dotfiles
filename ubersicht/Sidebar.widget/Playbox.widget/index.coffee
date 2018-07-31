@@ -1,5 +1,6 @@
 options =
   widgetEnable: true
+  order: 7
 
 command: "source Sidebar.widget/Playbox.widget/spotify-info.sh"
 
@@ -99,7 +100,7 @@ update: (output, domEl) ->
           div.find('.art').css('background-image', "url(#{tArtwork})")
 
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '7')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
   else
     div.remove()

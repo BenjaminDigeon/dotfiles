@@ -1,5 +1,6 @@
 options =
   widgetEnable: true
+  order: 1
   events: [
     {
       date: '2018-08-25',
@@ -80,7 +81,7 @@ update: (output, domEl) ->
       div.find("##{event.name.replace(" ","")}_value").html @dayUntil(event.date)
 
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '1')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
   else
     div.remove()

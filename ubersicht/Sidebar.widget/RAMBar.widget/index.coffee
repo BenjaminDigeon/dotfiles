@@ -1,5 +1,6 @@
 options =
   widgetEnable: true
+  order: 2
 
 command: "ps -e -o %mem | awk '{s+=$1} END {print s}'"
 
@@ -88,7 +89,7 @@ update: (output, domEl) ->
     div.find('.ram .progress').css('width', tCurrent)
     div.find('.ramPercent').html("#{percentage} %")
     # Sort out flex-box positioning.
-    div.parent('div').css('order', '2')
+    div.parent('div').css('order', @options.order)
     div.parent('div').css('flex', '0 1 auto')
     # Animate
     div.css('display', 'block')
