@@ -3,12 +3,12 @@ options =
   order: 1
   events: [
     {
-      date: '2018-08-25',
-      name: 'move out'
-    },
-    {
       date: '2018-09-04',
       name: 'departure'
+    },
+    {
+      date: '2018-09-17',
+      name: 'new work'
     }
   ]
 
