@@ -5,9 +5,12 @@ for file in ~/.{bash_prompt,exports,aliases,functions}; do
 done
 unset file
 
-# git autocompletation
-source $(brew --prefix)/etc/bash_completion.d/git-completion.bash
-source $(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh
+# Brew bash completion
+if type brew 2&>/dev/null; then
+  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+    source "$completion_file"
+  done
+fi
 
 # JDK1.8
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"

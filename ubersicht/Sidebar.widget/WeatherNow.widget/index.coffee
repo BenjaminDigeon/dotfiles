@@ -6,8 +6,8 @@
 options =
   widgetEnable  : true              # Easily enable or disable the widget.
   order: 3
-  city          : "Lille"   # default city in case location detection fails
-  region        : "FR"              # default region in case location detection fails
+  city          : "Montreal"   # default city in case location detection fails
+  region        : "CA"              # default region in case location detection fails
   units         : 'C'               # c for celcius. f for Fahrenheit
   staticLocation: true             # set to true to disable automatic location lookup
 
