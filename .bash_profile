@@ -12,6 +12,12 @@ if type brew 2&>/dev/null; then
   done
 fi
 
+# GPG
+export GPG_TTY=$(tty)
+
+# Language for command line tools
+export LANG=en_US.UTF-8
+
 # JDK1.8
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home"
 export PATH=$JAVA_HOME/bin:$PATH

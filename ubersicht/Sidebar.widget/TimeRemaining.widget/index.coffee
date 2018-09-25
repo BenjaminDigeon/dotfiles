@@ -1,5 +1,5 @@
 options =
-  widgetEnable: true
+  widgetEnable: false
   order: 1
   events: [
     {
