@@ -1,10 +1,10 @@
 options =
-  widgetEnable: true
+  widgetEnable: false
   order: 1
   events: [
     {
-      date: '2018-09-17',
-      name: 'new work'
+      date: 'December 17, 2018 00:00:00',
+      name: 'back to France'
     }
   ]
 
