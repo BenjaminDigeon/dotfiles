@@ -16,7 +16,7 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 brew install findutils
 
 # Wget
-brew install wget --enable-iri
+brew install wget
 
 # Git
 brew install git

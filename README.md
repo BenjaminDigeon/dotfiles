@@ -1,5 +1,7 @@
 # Dotfiles
 
+Clone this repo in any folder, and then run the config scripts.
+
 ## Configure MacOS
 
 ```bash
