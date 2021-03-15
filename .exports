@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Make nano the default editor
 export EDITOR="nano"
 
@@ -16,6 +18,3 @@ export HISTTIMEFORMAT
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
-
-# Configure the bundle open editor to atom
-export BUNDLER_EDITOR="atom"

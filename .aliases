@@ -1,17 +1,10 @@
-# Easier navigation: .., ..., ~ and -
-alias ..="cd .."
-alias cd..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-alias -- -="cd -"
+#!/bin/bash
 
 # Custom ls
 alias ls='ls -AGl'
 
 # GNU Find (brew install findutils)
-alias find=gfind
+#alias find=gfind
 
 # Tree
 alias tree='tree -CA'
@@ -20,8 +13,7 @@ alias tree='tree -CA'
 alias undopush="git push -f origin HEAD^:master"
 
 # IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias localip="ipconfig getifaddr en1"
+alias ip="curl ifconfig.me"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # Enhanced WHOIS lookups
@@ -52,9 +44,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 # Hide/show all desktop icons (useful when presenting)
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
-
-#Eject CD
-alias eject_cd="drutil tray eject 1"
 
 #Other
 alias ftp_server_start='sudo -s launchctl load -w /System/Library/LaunchDaemons/ftp.plist'
