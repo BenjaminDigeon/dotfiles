@@ -36,3 +36,20 @@ function extract() {
     echo "'$1' is not a valid file"
   fi
 }
+
+# Dock lock, unlock and spacers
+
+function lock_dock() {
+  defaults write com.apple.dock contents-immutable -bool true
+  killall Dock
+}
+
+function unlock_dock() {
+  defaults write com.apple.dock contents-immutable -bool false
+  killall Dock
+}
+
+function add_spacer_dock() {
+  defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
+  killall Dock
+}
