@@ -58,5 +58,8 @@ brew install --cask dteoh-devdocs
 # Keeping the mac awake
 brew install --cask keepingyouawake
 
+# Best terminal
+brew install --cask iterm2
+
 # Remove outdated versions from the cellar
 brew cleanup
