@@ -33,3 +33,25 @@ Link dotfiles to `~`
 ```bash
 git config --global core.excludesfile ~/.gitignore_global
 ```
+
+## Change MacOS Machine Name
+
+```bash
+scutil --set ComputerName "MBP"
+scutil --set LocalHostName "MPB"
+scutil --set HostName "MPB"
+```
+
+## Change MacOS Default Shell
+
+```bash
+chsh -s /bin/bash
+```
+
+## Setup Iterm
+
+Just load the `iTerm2Settings.json` into Iterm2.
+
+## Setup VSCode
+
+Just turn on the `Settings Sync` on VSCode with Github auth.

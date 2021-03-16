@@ -61,5 +61,9 @@ brew install --cask keepingyouawake
 # Best terminal
 brew install --cask iterm2
 
+# JetBrain Mono Font
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono
+
 # Remove outdated versions from the cellar
 brew cleanup
