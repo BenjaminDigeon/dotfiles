@@ -37,9 +37,9 @@ git config --global core.excludesfile ~/.gitignore_global
 ## Change MacOS Machine Name
 
 ```bash
-scutil --set ComputerName "MBP"
-scutil --set LocalHostName "MPB"
-scutil --set HostName "MPB"
+scutil --set ComputerName "MACHINE-NAME"
+scutil --set LocalHostName "MACHINE-NAME"
+scutil --set HostName "MACHINE-NAME.local"
 ```
 
 ## Change MacOS Default Shell
