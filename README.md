@@ -27,3 +27,9 @@ Link dotfiles to `~`
 ```bash
 ./install_brew_formulas.sh
 ```
+
+## Configure global gitignore
+
+```bash
+git config --global core.excludesfile ~/.gitignore_global
+```
