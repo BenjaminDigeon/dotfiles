@@ -6,3 +6,9 @@
 
 # MacOS Finder file
 .DS_Store
+
+# Docker Compose Override
+docker-compose.override.yaml
+
+# VSCode config folder
+.vscode/*

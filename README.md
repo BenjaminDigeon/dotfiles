@@ -28,10 +28,11 @@ Link dotfiles to `~`
 ./install_brew_formulas.sh
 ```
 
-## Configure global gitignore
+## Configure Git
 
 ```bash
 git config --global core.excludesfile ~/.gitignore_global
+git config --global core.editor "code --wait"
 ```
 
 ## Change MacOS Machine Name

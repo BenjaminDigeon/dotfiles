@@ -3,9 +3,6 @@
 # Custom ls
 alias ls='ls -AGl'
 
-# GNU Find (brew install findutils)
-#alias find=gfind
-
 # Tree
 alias tree='tree -CA'
 
