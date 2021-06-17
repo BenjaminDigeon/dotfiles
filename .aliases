@@ -1,7 +1,12 @@
 #!/bin/bash
 
 # Custom ls
-alias ls='ls -AGl'
+# Use exa(https://github.com/ogham/exa) if present
+if hash exa 2>/dev/null; then
+  alias ls="exa -al"
+else
+  alias ls="ls -aGl"
+fi
 
 # Tree
 alias tree='tree -CA'
