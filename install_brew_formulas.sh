@@ -15,6 +15,9 @@ echo "Don’t forget to add $(brew --prefix coreutils)/libexec/gnubin to \$PATH.
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install findutils
 
+# Better ls
+brew install exa
+
 # Wget
 brew install wget
 
