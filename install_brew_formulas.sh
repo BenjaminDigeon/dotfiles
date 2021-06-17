@@ -47,13 +47,16 @@ brew install python
 # Rust
 brew install rustup-init
 
+# Linter for Shell scripts
+brew install shellcheck
+
 # -- Cask formulas --
 
 # Window management
 brew install --cask rectangle
 
 # Docs
-brew install --cask dteoh-devdocs
+brew install --cask devdocs
 
 # Keeping the mac awake
 brew install --cask keepingyouawake

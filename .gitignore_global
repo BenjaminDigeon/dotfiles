@@ -12,3 +12,9 @@ docker-compose.override.yaml
 
 # VSCode config folder
 .vscode/*
+
+# Ignore Rubocop inherit files
+.rubocop-*
+
+# Dot env files
+.env

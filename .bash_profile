@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Load ~/.bash_prompt, ~/.exports, ~/.aliases and ~/.functions
-for file in ~/.{bash_prompt,exports,aliases,functions,extra}; do
+for file in ~/.{bash_prompt,exports,aliases,functions}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
 
 # Brew bash completion
-if type brew 2&>/dev/null; then
-  for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
-    source "$completion_file"
-  done
-fi
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+# Brew bash completion
+# if type brew 2&>/dev/null; then
+#   for completion_file in $(brew --prefix)/etc/bash_completion.d/*; do
+#     source "$completion_file"
+#   done
+# fi
 
 # Language for command line tools
 export LANG=en_US.UTF-8
@@ -30,3 +33,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Rbenv
 eval "$(rbenv init -)"
+
+# Source extra at last
+[ -r ~/.extra ] && source ~/.extra
