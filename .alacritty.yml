@@ -830,8 +830,23 @@ key_bindings:
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
 
-  # AZERTY (french) key for `|` is per default `Option|Shift` but it's not working...
-  - { key: L,               mods: Command|Shift,              chars: "\x7C"                 }
+  # AZERTY (french) key for `|` is per default `alt-shift-L`
+  # See https://github.com/alacritty/alacritty/issues/458#issuecomment-699885885
+  - { key: L,               mods: Alt|Shift,              chars: "\x7C"                     }
+  # AZERTY (french) key for `\` is per default `alt-shift-/`
+  - { key: Colon,           mods: Alt|Shift,                  chars: "\x5c"                 }
+  # From https://github.com/alacritty/alacritty/wiki/Keyboard-mappings#french-fr_fr
+#  - { key: Equals,    mods: Command,    action: DecreaseFontSize              }
+#  - { key: Slash,     mods: Command,    action: IncreaseFontSize              }
+#  - { key: A,         mods: Command,    action: Quit                          }
+#  - { key: Z,         mods: Command,    action: Quit                          }
+#  - { key: L,         mods: Alt|Shift,  chars: "|"                            }
+#  - { key: Key5,      mods: Alt,        chars: "{"                            }
+#  - { key: Minus,     mods: Alt,        chars: "}"                            }
+# - { key: Key5,      mods: Alt|Shift,  chars: "["                            }
+#  - { key: Minus,     mods: Alt|Shift,  chars: "]"                            }
+#  - { key: Period,    mods: Alt|Shift,  chars: "\\"                           }
+  - { key: N,         mods: Alt,        chars: "~"                            }
 
 #debug:
   # Display the time it takes to redraw each frame.
