@@ -720,6 +720,13 @@ font:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+  - { key: N,     mods: Alt,     chars: "~"}
+  - { key: 37,     mods: Shift|Alt,     chars: "|"}
+  - { key: 47,     mods: Shift|Alt,     chars: "\\"}
+  - { key: LBracket,     mods: Alt,     chars: "{"}
+  - { key: RBracket,     mods: Alt,     chars: "}"}
+  - { key: LBracket,     mods: Shift|Alt,     chars: "["}
+  - { key: RBracket,     mods: Shift|Alt,     chars: "]"}
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
