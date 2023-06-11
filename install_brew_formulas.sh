@@ -25,6 +25,9 @@ brew install wget
 brew install git
 brew install git-lfs
 
+# Batch completion
+brew install bash-completion
+
 # Htop
 brew install htop
 
